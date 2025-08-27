@@ -89,9 +89,7 @@ function SingleRecipePage() {
 
       try {
         // Make API call to get the specific recipe
-        const response = await fetch(
-          `https://68af8db1b91dfcdd62bc8eca.mockapi.io/recipies/${id}`
-        );
+        const response = await fetch(`http://localhost:3001/recipes/${id}`);
 
         if (!response.ok) {
           if (response.status === 404) {
@@ -132,7 +130,7 @@ function SingleRecipePage() {
     try {
       // Make API call to update favorite status
       const response = await fetch(
-        `https://68af8db1b91dfcdd62bc8eca.mockapi.io/recipies/${recipe.id}`,
+        `http://localhost:3001/recipes/${recipe.id}`,
         {
           method: "PUT",
           headers: {
@@ -179,7 +177,7 @@ function SingleRecipePage() {
     try {
       // Make API call to update the recipe
       const response = await fetch(
-        `https://68af8db1b91dfcdd62bc8eca.mockapi.io/recipies/${recipe.id}`,
+        `http://localhost:3001/recipes/${recipe.id}`,
         {
           method: "PUT",
           headers: {
@@ -218,7 +216,7 @@ function SingleRecipePage() {
     try {
       // Make API call to delete the recipe
       const response = await fetch(
-        `https://68af8db1b91dfcdd62bc8eca.mockapi.io/recipies/${recipe.id}`,
+        `http://localhost:3001/recipes/${recipe.id}`,
         {
           method: "DELETE",
         }
