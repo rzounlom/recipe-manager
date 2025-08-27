@@ -39,18 +39,19 @@ function HomePage() {
     // Function to fetch recipes from the API
     const fetchFeaturedRecipes = async () => {
       try {
-        // Make API call to get recipes
-        // We'll get the first 3 recipes to feature on the home page
+        // Make API call to get all recipes
         const response = await fetch(
-          "https://68af8db1b91dfcdd62bc8eca.mockapi.io/recipies?_limit=3"
+          "https://68af8db1b91dfcdd62bc8eca.mockapi.io/recipies"
         );
 
         if (!response.ok) {
           throw new Error("Failed to fetch recipes");
         }
 
-        const recipes = await response.json();
-        setFeaturedRecipes(recipes);
+        const allRecipes = await response.json();
+        // Take only the first 3 recipes to feature on the home page
+        const featured = allRecipes.slice(0, 3);
+        setFeaturedRecipes(featured);
       } catch (err) {
         setError("Failed to load featured recipes");
         console.error("Error fetching recipes:", err);
