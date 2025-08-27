@@ -1,6 +1,7 @@
 import AllRecipesPage from "./pages/AllRecipesPage";
 import ContactPage from "./pages/ContactPage";
 // Import all the page components we'll create
+import FavoritesPage from "./pages/FavoritesPage";
 import HomePage from "./pages/HomePage";
 // Import the layout component that will wrap all pages
 import Layout from "./components/Layout";
@@ -26,6 +27,11 @@ export const router = createBrowserRouter([
         // All recipes page - shows a list of all recipes
         path: "recipes",
         element: <AllRecipesPage />,
+      },
+      {
+        // Favorites page - shows only favorite recipes
+        path: "favorites",
+        element: <FavoritesPage />,
       },
       {
         // Single recipe page - shows details of one specific recipe

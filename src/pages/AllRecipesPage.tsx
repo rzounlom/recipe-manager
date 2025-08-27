@@ -38,7 +38,9 @@ function AllRecipesPage() {
     const fetchRecipes = async () => {
       try {
         // Make API call to get all recipes
-        const response = await fetch("http://localhost:3001/recipes");
+        const response = await fetch(
+          "https://68af8db1b91dfcdd62bc8eca.mockapi.io/recipies"
+        );
 
         if (!response.ok) {
           throw new Error("Failed to fetch recipes");
@@ -66,13 +68,16 @@ function AllRecipesPage() {
     try {
       // Make API call to update favorite status
       const response = await fetch(
-        `http://localhost:3001/recipes/${recipeId}`,
+        `https://68af8db1b91dfcdd62bc8eca.mockapi.io/recipies/${recipeId}`,
         {
-          method: "PATCH",
+          method: "PUT",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ isFavorite }),
+          body: JSON.stringify({
+            ...recipes.find((r) => r.id === recipeId),
+            isFavorite,
+          }),
         }
       );
 

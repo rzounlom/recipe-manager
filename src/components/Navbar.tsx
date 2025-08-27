@@ -53,6 +53,15 @@ function Navbar({ onNewRecipe }: NavbarProps) {
               All Recipes
             </Nav.Link>
 
+            {/* Favorites link - active when we're on the favorites page */}
+            <Nav.Link
+              as={Link}
+              to="/favorites"
+              active={location.pathname === "/favorites"}
+            >
+              ❤️ Favorites
+            </Nav.Link>
+
             {/* Contact link - active when we're on the contact page */}
             <Nav.Link
               as={Link}

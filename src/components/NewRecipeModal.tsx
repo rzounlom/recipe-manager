@@ -52,18 +52,21 @@ function NewRecipeModal({ show, onHide }: NewRecipeModalProps) {
 
     try {
       // Make API call to create new recipe
-      const response = await fetch("http://localhost:3001/recipes", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...formData,
-          // Add some default values
-          isFavorite: false,
-          createdAt: new Date().toISOString(),
-        }),
-      });
+      const response = await fetch(
+        "https://68af8db1b91dfcdd62bc8eca.mockapi.io/recipies",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ...formData,
+            // Add some default values
+            isFavorite: false,
+            createdAt: new Date().toISOString(),
+          }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to create recipe");

@@ -41,7 +41,9 @@ function HomePage() {
       try {
         // Make API call to get recipes
         // We'll get the first 3 recipes to feature on the home page
-        const response = await fetch("http://localhost:3001/recipes?_limit=3");
+        const response = await fetch(
+          "https://68af8db1b91dfcdd62bc8eca.mockapi.io/recipies?_limit=3"
+        );
 
         if (!response.ok) {
           throw new Error("Failed to fetch recipes");
@@ -69,13 +71,16 @@ function HomePage() {
     try {
       // Make API call to update favorite status
       const response = await fetch(
-        `http://localhost:3001/recipes/${recipeId}`,
+        `https://68af8db1b91dfcdd62bc8eca.mockapi.io/recipies/${recipeId}`,
         {
-          method: "PATCH",
+          method: "PUT",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ isFavorite }),
+          body: JSON.stringify({
+            ...featuredRecipes.find((r) => r.id === recipeId),
+            isFavorite,
+          }),
         }
       );
 
