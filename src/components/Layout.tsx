@@ -16,15 +16,16 @@ function Layout() {
   const [showNewRecipeModal, setShowNewRecipeModal] = useState(false);
 
   return (
-    // Container provides consistent spacing and responsive behavior
-    <Container fluid className="p-0">
+    // Main app container - navbar will always be visible
+    <div className="app-container">
       {/* Navbar component that appears on all pages */}
       <Navbar onNewRecipe={() => setShowNewRecipeModal(true)} />
 
-      {/* Outlet is a React Router component that renders the child route */}
-      {/* This is where our page components (HomePage, AllRecipesPage, etc.) will be displayed */}
-      <main className="py-4">
-        <Outlet />
+      {/* Main content area - this is where pages render */}
+      <main className="main-content">
+        <Container>
+          <Outlet />
+        </Container>
       </main>
 
       {/* Modal for creating new recipes */}
@@ -33,7 +34,7 @@ function Layout() {
         show={showNewRecipeModal}
         onHide={() => setShowNewRecipeModal(false)}
       />
-    </Container>
+    </div>
   );
 }
 

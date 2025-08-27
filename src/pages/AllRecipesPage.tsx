@@ -1,5 +1,5 @@
 // Import React Bootstrap components for styling
-import { Alert, Col, Container, Row } from "react-bootstrap";
+import { Alert, Col, Row } from "react-bootstrap";
 // Import React hooks for managing component state
 import { useEffect, useState } from "react";
 
@@ -91,8 +91,8 @@ function AllRecipesPage() {
   };
 
   return (
-    // Main container for the all recipes page
-    <Container>
+    // Main content for the all recipes page
+    <>
       {/* Page header */}
       <Row className="mb-4">
         <Col>
@@ -147,7 +147,7 @@ function AllRecipesPage() {
           )}
         </Col>
       </Row>
-    </Container>
+    </>
   );
 }
 

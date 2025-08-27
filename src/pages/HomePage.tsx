@@ -1,5 +1,5 @@
 // Import React Bootstrap components for styling
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Card, Col, Row } from "react-bootstrap";
 // Import React hooks for managing component state
 import { useEffect, useState } from "react";
 
@@ -94,8 +94,8 @@ function HomePage() {
   };
 
   return (
-    // Main container for the home page
-    <Container>
+    // Main content for the home page
+    <>
       {/* Hero section with welcome message */}
       <Row className="mb-5">
         <Col>
@@ -197,7 +197,7 @@ function HomePage() {
           </Row>
         </Col>
       </Row>
-    </Container>
+    </>
   );
 }
 

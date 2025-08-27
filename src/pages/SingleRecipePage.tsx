@@ -5,7 +5,6 @@ import {
   Button,
   Card,
   Col,
-  Container,
   Form,
   Modal,
   Row,
@@ -232,8 +231,8 @@ function SingleRecipePage() {
   };
 
   return (
-    // Main container for the single recipe page
-    <Container>
+    // Main content for the single recipe page
+    <>
       {/* Back button */}
       <Row className="mb-3">
         <Col>
@@ -460,7 +459,7 @@ function SingleRecipePage() {
           </Button>
         </Modal.Footer>
       </Modal>
-    </Container>
+    </>
   );
 }
 

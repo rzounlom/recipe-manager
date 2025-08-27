@@ -1,5 +1,5 @@
 // Import React Bootstrap components for styling
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Row } from "react-bootstrap";
 // Import icons from react-icons
 import {
   FaEnvelope,
@@ -12,8 +12,8 @@ import {
 // ContactPage component - displays contact information
 function ContactPage() {
   return (
-    // Main container for the contact page
-    <Container>
+    // Main content for the contact page
+    <>
       {/* Page header */}
       <Row className="mb-5">
         <Col>
@@ -156,7 +156,7 @@ function ContactPage() {
           </Card>
         </Col>
       </Row>
-    </Container>
+    </>
   );
 }
 
