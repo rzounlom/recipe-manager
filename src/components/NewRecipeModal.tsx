@@ -17,6 +17,7 @@ function NewRecipeModal({ show, onHide }: NewRecipeModalProps) {
   const [formData, setFormData] = useState({
     title: "",
     description: "",
+    imgUrl: "",
     ingredients: "",
     instructions: "",
     cookingTime: "",
@@ -72,6 +73,7 @@ function NewRecipeModal({ show, onHide }: NewRecipeModalProps) {
       setFormData({
         title: "",
         description: "",
+        imgUrl: "",
         ingredients: "",
         instructions: "",
         cookingTime: "",
@@ -127,6 +129,21 @@ function NewRecipeModal({ show, onHide }: NewRecipeModalProps) {
               rows={3}
               placeholder="Brief description of the recipe"
             />
+          </Form.Group>
+
+          {/* Recipe image URL field */}
+          <Form.Group className="mb-3">
+            <Form.Label>Image URL</Form.Label>
+            <Form.Control
+              type="url"
+              name="imgUrl"
+              value={formData.imgUrl}
+              onChange={handleInputChange}
+              placeholder="https://example.com/recipe-image.jpg"
+            />
+            <Form.Text className="text-muted">
+              Optional: Add a URL to an image of your recipe
+            </Form.Text>
           </Form.Group>
 
           {/* Ingredients field */}

@@ -14,6 +14,7 @@ interface Recipe {
   id: number;
   title: string;
   description: string;
+  imgUrl: string;
   ingredients: string;
   instructions: string;
   cookingTime: number;
@@ -58,6 +59,16 @@ function RecipeCard({
   return (
     // Card component that displays the recipe information
     <Card className="h-100 shadow-sm">
+      {/* Recipe image */}
+      {recipe.imgUrl && (
+        <Card.Img
+          variant="top"
+          src={recipe.imgUrl}
+          alt={recipe.title}
+          style={{ height: "200px", objectFit: "cover" }}
+        />
+      )}
+
       {/* Card header with title and favorite button */}
       <Card.Header className="d-flex justify-content-between align-items-start">
         <Card.Title className="mb-0 fs-6">{recipe.title}</Card.Title>

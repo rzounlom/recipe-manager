@@ -32,6 +32,7 @@ interface Recipe {
   id: number;
   title: string;
   description: string;
+  imgUrl: string;
   ingredients: string;
   instructions: string;
   cookingTime: number;
@@ -73,6 +74,7 @@ function SingleRecipePage() {
   const [editFormData, setEditFormData] = useState({
     title: "",
     description: "",
+    imgUrl: "",
     ingredients: "",
     instructions: "",
     cookingTime: "",
@@ -103,6 +105,7 @@ function SingleRecipePage() {
         setEditFormData({
           title: recipeData.title,
           description: recipeData.description,
+          imgUrl: recipeData.imgUrl || "",
           ingredients: recipeData.ingredients,
           instructions: recipeData.instructions,
           cookingTime: recipeData.cookingTime?.toString() || "",
@@ -255,93 +258,116 @@ function SingleRecipePage() {
 
       {/* Show recipe details if loaded successfully */}
       {!isLoading && !error && recipe && (
-        <Row>
-          <Col lg={8}>
-            {/* Recipe header with title and actions */}
-            <div className="d-flex justify-content-between align-items-start mb-4">
-              <div>
-                <h1 className="mb-2">{recipe.title}</h1>
-                <p className="text-muted mb-0">{recipe.description}</p>
+        <>
+          {/* Recipe image */}
+          {recipe.imgUrl && (
+            <Row className="mb-4">
+              <Col>
+                <img
+                  src={recipe.imgUrl}
+                  alt={recipe.title}
+                  className="img-fluid rounded"
+                  style={{
+                    width: "100%",
+                    maxHeight: "400px",
+                    objectFit: "cover",
+                  }}
+                />
+              </Col>
+            </Row>
+          )}
+
+          <Row>
+            <Col lg={8}>
+              {/* Recipe header with title and actions */}
+              <div className="d-flex justify-content-between align-items-start mb-4">
+                <div>
+                  <h1 className="mb-2">{recipe.title}</h1>
+                  <p className="text-muted mb-0">{recipe.description}</p>
+                </div>
+                <div className="d-flex gap-2">
+                  {/* Favorite button */}
+                  <Button
+                    variant="outline-danger"
+                    size="sm"
+                    onClick={handleFavoriteToggle}
+                    className="d-flex align-items-center gap-1"
+                  >
+                    {recipe.isFavorite ? <FaHeart /> : <FaRegHeart />}
+                    {recipe.isFavorite ? "Favorited" : "Favorite"}
+                  </Button>
+
+                  {/* Edit button */}
+                  <Button
+                    variant="outline-primary"
+                    size="sm"
+                    onClick={() => setShowEditModal(true)}
+                    className="d-flex align-items-center gap-1"
+                  >
+                    <FaEdit />
+                    Edit
+                  </Button>
+
+                  {/* Delete button */}
+                  <Button
+                    variant="outline-danger"
+                    size="sm"
+                    onClick={() => setShowDeleteModal(true)}
+                    className="d-flex align-items-center gap-1"
+                  >
+                    <FaTrash />
+                    Delete
+                  </Button>
+                </div>
               </div>
-              <div className="d-flex gap-2">
-                {/* Favorite button */}
-                <Button
-                  variant="outline-danger"
-                  size="sm"
-                  onClick={handleFavoriteToggle}
-                  className="d-flex align-items-center gap-1"
-                >
-                  {recipe.isFavorite ? <FaHeart /> : <FaRegHeart />}
-                  {recipe.isFavorite ? "Favorited" : "Favorite"}
-                </Button>
 
-                {/* Edit button */}
-                <Button
-                  variant="outline-primary"
-                  size="sm"
-                  onClick={() => setShowEditModal(true)}
+              {/* Recipe metadata */}
+              <div className="d-flex gap-3 mb-4">
+                <Badge
+                  bg="secondary"
                   className="d-flex align-items-center gap-1"
                 >
-                  <FaEdit />
-                  Edit
-                </Button>
-
-                {/* Delete button */}
-                <Button
-                  variant="outline-danger"
-                  size="sm"
-                  onClick={() => setShowDeleteModal(true)}
-                  className="d-flex align-items-center gap-1"
-                >
-                  <FaTrash />
-                  Delete
-                </Button>
+                  <FaClock />
+                  {recipe.cookingTime || 0} minutes
+                </Badge>
+                <Badge bg="info" className="d-flex align-items-center gap-1">
+                  <FaUsers />
+                  {recipe.servings || 0} servings
+                </Badge>
               </div>
-            </div>
 
-            {/* Recipe metadata */}
-            <div className="d-flex gap-3 mb-4">
-              <Badge bg="secondary" className="d-flex align-items-center gap-1">
-                <FaClock />
-                {recipe.cookingTime || 0} minutes
-              </Badge>
-              <Badge bg="info" className="d-flex align-items-center gap-1">
-                <FaUsers />
-                {recipe.servings || 0} servings
-              </Badge>
-            </div>
+              {/* Ingredients section */}
+              <Card className="mb-4">
+                <Card.Header>
+                  <h3 className="h5 mb-0">Ingredients</h3>
+                </Card.Header>
+                <Card.Body>
+                  <pre
+                    className="mb-0"
+                    style={{ whiteSpace: "pre-wrap", fontFamily: "inherit" }}
+                  >
+                    {recipe.ingredients || "No ingredients listed."}
+                  </pre>
+                </Card.Body>
+              </Card>
 
-            {/* Ingredients section */}
-            <Card className="mb-4">
-              <Card.Header>
-                <h3 className="h5 mb-0">Ingredients</h3>
-              </Card.Header>
-              <Card.Body>
-                <pre
-                  className="mb-0"
-                  style={{ whiteSpace: "pre-wrap", fontFamily: "inherit" }}
-                >
-                  {recipe.ingredients || "No ingredients listed."}
-                </pre>
-              </Card.Body>
-            </Card>
-
-            {/* Instructions section */}
-            <Card>
-              <Card.Header>
-                <h3 className="h5 mb-0">Instructions</h3>
-              </Card.Header>
-              <Card.Body>
-                <pre
-                  className="mb-0"
-                  style={{ whiteSpace: "pre-wrap", fontFamily: "inherit" }}
-                >
-                  {recipe.instructions || "No instructions available."}
-                </pre>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+              {/* Instructions section */}
+              <Card>
+                <Card.Header>
+                  <h3 className="h5 mb-0">Instructions</h3>
+                </Card.Header>
+                <Card.Body>
+                  <pre
+                    className="mb-0"
+                    style={{ whiteSpace: "pre-wrap", fontFamily: "inherit" }}
+                  >
+                    {recipe.instructions || "No instructions available."}
+                  </pre>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </>
       )}
 
       {/* Edit Recipe Modal */}
@@ -375,6 +401,20 @@ function SingleRecipePage() {
                 onChange={handleEditInputChange}
                 rows={3}
               />
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+              <Form.Label>Image URL</Form.Label>
+              <Form.Control
+                type="url"
+                name="imgUrl"
+                value={editFormData.imgUrl}
+                onChange={handleEditInputChange}
+                placeholder="https://example.com/recipe-image.jpg"
+              />
+              <Form.Text className="text-muted">
+                Optional: Add a URL to an image of your recipe
+              </Form.Text>
             </Form.Group>
 
             <Form.Group className="mb-3">
