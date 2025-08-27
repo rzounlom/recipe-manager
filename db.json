@@ -1,0 +1,114 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "title": "Classic Spaghetti Carbonara",
+      "description": "A traditional Italian pasta dish with eggs, cheese, pancetta, and black pepper. Simple yet incredibly flavorful!",
+      "ingredients": "400g spaghetti\n200g pancetta or guanciale\n4 large eggs\n100g Pecorino Romano cheese\n100g Parmigiano Reggiano\nBlack pepper\nSalt",
+      "instructions": "1. Bring a large pot of salted water to boil and cook spaghetti according to package directions.\n2. While pasta cooks, cut pancetta into small cubes and cook in a large skillet until crispy.\n3. In a bowl, whisk together eggs, grated cheeses, and plenty of black pepper.\n4. Drain pasta, reserving 1 cup of pasta water.\n5. Add hot pasta to the skillet with pancetta, remove from heat.\n6. Quickly stir in egg mixture, adding pasta water as needed to create a creamy sauce.\n7. Serve immediately with extra cheese and black pepper.",
+      "cookingTime": 20,
+      "servings": 4,
+      "isFavorite": true,
+      "createdAt": "2024-01-15T10:30:00.000Z"
+    },
+    {
+      "id": "2",
+      "title": "Chicken Tikka Masala",
+      "description": "A creamy and aromatic Indian curry dish with tender chicken pieces in a rich tomato-based sauce.",
+      "ingredients": "1kg chicken breast, cubed\n2 cups yogurt\n2 tbsp tikka masala paste\n1 onion, diced\n3 cloves garlic, minced\n1 inch ginger, grated\n400ml coconut milk\n400g canned tomatoes\nFresh cilantro\nBasmati rice",
+      "instructions": "1. Marinate chicken in yogurt and tikka masala paste for at least 2 hours.\n2. Cook marinated chicken in a hot pan until browned, set aside.\n3. In the same pan, sauté onion, garlic, and ginger until soft.\n4. Add tomatoes and cook until thickened.\n5. Return chicken to pan, add coconut milk and simmer for 20 minutes.\n6. Garnish with fresh cilantro and serve with basmati rice.",
+      "cookingTime": 45,
+      "servings": 6,
+      "isFavorite": false,
+      "createdAt": "2024-01-16T14:20:00.000Z"
+    },
+    {
+      "id": "3",
+      "title": "Chocolate Chip Cookies",
+      "description": "Soft and chewy chocolate chip cookies with crispy edges. Perfect for any occasion!",
+      "ingredients": "2 1/4 cups all-purpose flour\n1 tsp baking soda\n1 tsp salt\n1 cup unsalted butter, softened\n3/4 cup granulated sugar\n3/4 cup brown sugar\n2 large eggs\n2 tsp vanilla extract\n2 cups chocolate chips",
+      "instructions": "1. Preheat oven to 375°F (190°C).\n2. Mix flour, baking soda, and salt in a bowl.\n3. Cream butter and sugars until light and fluffy.\n4. Beat in eggs and vanilla.\n5. Gradually mix in flour mixture.\n6. Stir in chocolate chips.\n7. Drop rounded tablespoons onto ungreased baking sheets.\n8. Bake for 9-11 minutes until golden brown.\n9. Cool on baking sheets for 2 minutes, then transfer to wire racks.",
+      "cookingTime": 25,
+      "servings": 24,
+      "isFavorite": true,
+      "createdAt": "2024-01-17T09:15:00.000Z"
+    },
+    {
+      "id": "4",
+      "title": "Greek Salad",
+      "description": "A refreshing Mediterranean salad with fresh vegetables, olives, and feta cheese.",
+      "ingredients": "2 large tomatoes, diced\n1 cucumber, diced\n1 red onion, thinly sliced\n1 green bell pepper, diced\n200g feta cheese, cubed\n1/2 cup Kalamata olives\n2 tbsp olive oil\n1 tbsp red wine vinegar\n1 tsp dried oregano\nSalt and pepper",
+      "instructions": "1. Combine tomatoes, cucumber, onion, and bell pepper in a large bowl.\n2. Add feta cheese and olives.\n3. In a small bowl, whisk together olive oil, vinegar, oregano, salt, and pepper.\n4. Pour dressing over salad and gently toss to combine.\n5. Serve immediately or refrigerate for up to 2 hours.",
+      "cookingTime": 15,
+      "servings": 4,
+      "isFavorite": false,
+      "createdAt": "2024-01-18T12:45:00.000Z"
+    },
+    {
+      "id": "5",
+      "title": "Beef Tacos",
+      "description": "Flavorful ground beef tacos with fresh toppings and homemade seasoning.",
+      "ingredients": "500g ground beef\n1 onion, diced\n2 cloves garlic, minced\n2 tbsp taco seasoning\n8 taco shells\nShredded lettuce\nDiced tomatoes\nShredded cheese\nSour cream\nSalsa",
+      "instructions": "1. Brown ground beef in a large skillet over medium heat.\n2. Add onion and garlic, cook until softened.\n3. Stir in taco seasoning and 1/4 cup water, simmer for 5 minutes.\n4. Warm taco shells according to package directions.\n5. Fill shells with beef mixture and top with desired toppings.\n6. Serve immediately with salsa and sour cream on the side.",
+      "cookingTime": 20,
+      "servings": 4,
+      "isFavorite": true,
+      "createdAt": "2024-01-19T18:30:00.000Z"
+    },
+    {
+      "id": "6",
+      "title": "Vegetable Stir Fry",
+      "description": "A quick and healthy stir fry with colorful vegetables and a savory sauce.",
+      "ingredients": "2 cups broccoli florets\n1 bell pepper, sliced\n1 carrot, julienned\n1 cup snap peas\n2 cloves garlic, minced\n1 inch ginger, grated\n3 tbsp soy sauce\n1 tbsp sesame oil\n2 tbsp vegetable oil\nCooked rice for serving",
+      "instructions": "1. Heat vegetable oil in a wok or large skillet over high heat.\n2. Add garlic and ginger, stir fry for 30 seconds.\n3. Add vegetables and stir fry for 3-4 minutes until crisp-tender.\n4. Add soy sauce and sesame oil, toss to combine.\n5. Serve immediately over cooked rice.",
+      "cookingTime": 15,
+      "servings": 4,
+      "isFavorite": false,
+      "createdAt": "2024-01-20T11:00:00.000Z"
+    },
+    {
+      "id": "7",
+      "title": "French Onion Soup",
+      "description": "A classic French soup with caramelized onions, rich beef broth, and melted cheese.",
+      "ingredients": "4 large onions, thinly sliced\n3 tbsp butter\n2 tbsp olive oil\n1 tsp sugar\n4 cups beef broth\n1 cup white wine\n1 baguette, sliced\n200g Gruyère cheese, grated\nSalt and pepper",
+      "instructions": "1. Heat butter and oil in a large pot over medium heat.\n2. Add onions and sugar, cook slowly for 45 minutes until caramelized.\n3. Add wine and cook until reduced by half.\n4. Add beef broth and simmer for 30 minutes.\n5. Preheat broiler.\n6. Ladle soup into oven-safe bowls.\n7. Top with baguette slices and cheese.\n8. Broil until cheese is melted and bubbly.",
+      "cookingTime": 90,
+      "servings": 4,
+      "isFavorite": false,
+      "createdAt": "2024-01-21T16:20:00.000Z"
+    },
+    {
+      "id": "8",
+      "title": "Pancakes",
+      "description": "Fluffy and delicious homemade pancakes perfect for breakfast or brunch.",
+      "ingredients": "2 cups all-purpose flour\n2 tbsp sugar\n2 tsp baking powder\n1/2 tsp salt\n2 large eggs\n1 3/4 cups milk\n1/4 cup melted butter\nMaple syrup for serving",
+      "instructions": "1. Whisk together flour, sugar, baking powder, and salt.\n2. In another bowl, whisk eggs, milk, and melted butter.\n3. Pour wet ingredients into dry ingredients and stir until just combined.\n4. Heat a griddle or large skillet over medium heat.\n5. Pour 1/4 cup batter for each pancake.\n6. Cook until bubbles form on surface, then flip.\n7. Cook until golden brown on both sides.\n8. Serve with maple syrup.",
+      "cookingTime": 20,
+      "servings": 8,
+      "isFavorite": true,
+      "createdAt": "2024-01-22T08:00:00.000Z"
+    },
+    {
+      "id": "9",
+      "title": "Caesar Salad",
+      "description": "A classic Caesar salad with crisp romaine lettuce, croutons, and creamy dressing.",
+      "ingredients": "2 heads romaine lettuce, chopped\n1/2 cup croutons\n1/4 cup Parmesan cheese, grated\n2 tbsp lemon juice\n1 tbsp Dijon mustard\n1 clove garlic, minced\n1/4 cup olive oil\n1/4 cup mayonnaise\nSalt and pepper",
+      "instructions": "1. In a small bowl, whisk together lemon juice, mustard, garlic, and mayonnaise.\n2. Slowly whisk in olive oil until emulsified.\n3. Season with salt and pepper.\n4. In a large bowl, combine lettuce, croutons, and Parmesan.\n5. Pour dressing over salad and toss to coat.\n6. Serve immediately.",
+      "cookingTime": 15,
+      "servings": 4,
+      "isFavorite": false,
+      "createdAt": "2024-01-23T13:15:00.000Z"
+    },
+    {
+      "id": "10",
+      "title": "Chicken Noodle Soup",
+      "description": "A comforting homemade chicken noodle soup with tender chicken and vegetables.",
+      "ingredients": "1 whole chicken, cut into pieces\n2 carrots, diced\n2 celery stalks, diced\n1 onion, diced\n3 cloves garlic, minced\n8 cups chicken broth\n2 cups egg noodles\n2 tbsp olive oil\nFresh parsley\nSalt and pepper",
+      "instructions": "1. Heat oil in a large pot over medium heat.\n2. Add chicken pieces and brown on all sides.\n3. Add vegetables and garlic, cook for 5 minutes.\n4. Pour in chicken broth and bring to a boil.\n5. Reduce heat and simmer for 1 hour.\n6. Remove chicken, shred meat, and return to pot.\n7. Add noodles and cook for 8-10 minutes.\n8. Season with salt and pepper.\n9. Garnish with fresh parsley and serve.",
+      "cookingTime": 90,
+      "servings": 6,
+      "isFavorite": true,
+      "createdAt": "2024-01-24T17:45:00.000Z"
+    }
+  ]
+}
