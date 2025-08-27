@@ -1,8 +1,8 @@
 // Import React Bootstrap components for styling
 import { Container } from "react-bootstrap";
 // Import our custom components
-import Navbar from "./Navbar";
-import NewRecipeModal from "./NewRecipeModal";
+import Navbar from "../components/Navbar";
+import NewRecipeModal from "../components/NewRecipeModal";
 // Import React Router components for navigation
 import { Outlet } from "react-router-dom";
 // Import React hooks for managing component state

@@ -1,5 +1,5 @@
 // Import React Bootstrap components for styling
-import { Button, Card, Col, Row } from "react-bootstrap";
+import { Card, Col, Row } from "react-bootstrap";
 // Import React hooks for managing component state
 import { useEffect, useState } from "react";
 
@@ -107,9 +107,9 @@ function HomePage() {
                 place. From quick weeknight dinners to elaborate weekend feasts,
                 we've got you covered with our collection of delicious recipes.
               </p>
-              <Button as={Link} to="/recipes" variant="light" size="lg">
+              <Link to="/recipes" className="btn btn-light btn-lg">
                 Explore All Recipes
-              </Button>
+              </Link>
             </Card.Body>
           </Card>
         </Col>
@@ -148,9 +148,9 @@ function HomePage() {
           {!isLoading && !error && featuredRecipes.length === 0 && (
             <div className="text-center py-5">
               <p className="text-muted">No recipes available yet.</p>
-              <Button as={Link} to="/recipes" variant="primary">
+              <Link to="/recipes" className="btn btn-primary">
                 View All Recipes
-              </Button>
+              </Link>
             </div>
           )}
         </Col>

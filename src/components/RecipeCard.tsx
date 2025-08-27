@@ -105,15 +105,12 @@ function RecipeCard({
         <div className="d-flex gap-2">
           {/* View More button - links to the single recipe page */}
           {showViewMore && (
-            <Button
-              as={Link}
+            <Link
               to={`/recipes/${recipe.id}`}
-              variant="outline-primary"
-              size="sm"
-              className="flex-grow-1"
+              className="btn btn-outline-primary btn-sm flex-grow-1"
             >
               View More
-            </Button>
+            </Link>
           )}
         </div>
       </Card.Body>
